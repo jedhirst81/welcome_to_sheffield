@@ -4,9 +4,17 @@
 <html lang="en">
 
 <style>
+body {background-color: LightCyan;}
+
 h1 {text-align: center;}
+h1 {font-family: verdana;}
+h1 {color: DarkBlue}
+
 p {text-align: center;}
+p {font-family: verdana;}
+p {color: DarkBlue}
 a {text-align: center;}
+
 
 </style>
 
@@ -20,16 +28,31 @@ a {text-align: center;}
         <p>It hosts two soccer teams: 
         <br><br>
         
-        <a href="https://www.swfc.co.uk/" style="display: block; width: fit-content; margin: auto;"> Sheffield Wednesday </a>
-        <p>(The 'Owls')</p>
-        <img src="swfc2.jpg" width="50" height="50" style="display: block; margin: auto;">
-        
-        <pr><br><br></pr>
-        
-        <a href="https://www.sufc.co.uk/" style="display: block; width: fit-content; margin: auto;"> Sheffield United </a>
-        <p>(The 'Blades')</p>
-        <img src="sufc2.jpg" width="50" height="50" style="display: block; margin: auto;">
-        </p>
+        <style>
+            .container {
+                display: flex; /* Enables flexbox */
+                justify-content: center; /* Center items horizontally */
+                gap: 20px; /* Space between flexboxes */
+            }
+            .box {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        </style>
+
+        <div class="container">
+            <div class="swfc">
+                <a href="https://www.swfc.co.uk/" style="display: block; width: fit-content; margin: auto;"> Sheffield Wednesday </a>
+                <img src="swfc2.jpg" width="80" height="80" style="display: block; margin: auto;">
+                <p>(The 'Owls')</p>
+            </div>
+            <div class="sufc">
+                <a href="https://www.sufc.co.uk/" style="display: block; width: fit-content; margin: auto;"> Sheffield United </a>
+                <img src="sufc2.jpg" width="80" height="80" style="display: block; margin: auto;">
+                <p>(The 'Blades')</p>
+            </div>
+        </div>
 
         <br><br>
         <hr>
