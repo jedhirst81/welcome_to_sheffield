@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="wts_css.4.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .menu-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            background: #333;
+            padding: 10px;
+        }
+
+        .menu-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .box {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+
+        .box img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            padding: 10px;
+        }
+    </style>
+
+</head>
+
+<div class="menu-links">
+
+    <a href="index.html">Home</a>    
+    <a href="sports.html">Sports</a>  
+    <a href="universities.html">Universities</a>
+    <a href="culture.html">Culture</a>
+    <a href="gallery.html">Gallery</a>
+
+</div>
+
+<body>
+
+    <p>We would like to know why you are visiting Sheffield.</p>
+    <p>Please describe the reason for your visit:</p>
+
+    <form>
+        <div>
+            <input type="radio" id="Business" name="reason" value="Business">
+            <label for="Business"> Business</label><br>
+            <input type="radio" id="Tourism" name="reason" value="Tourism">
+            <label for="Tourism"> Tourism</label><br>
+            <input type="radio" id="Study" name="reason" value="Study">
+            <label for="Study"> Study</label><br>
+            <input type="radio" id="Other" name="reason" value="Other">
+            <label for="Other"> Other</label><br>
+    
+            <label for="statereason">If you have selected 'Other', please briefly state the reason for your visit:</label>
+            <textarea id="statereason" name="statereason" rows="5" cols="40">
+            </textarea>
+        </div>
+        <br>
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+
+    </form>
+
+</body>
+
