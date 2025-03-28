@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="wts_css.4.2.css">
+    <title>Around Sheffield</title>
+    <style>
+        
+        .scroll-container {
+            white-space: nowrap;
+            overflow: hidden;
+            width: 100%;
+        }
+        .scroll-images {
+            display: inline-block;
+            animation: scroll 45s linear infinite;
+        }
+        @keyframes scroll {
+            from { transform: translateX(5%); }
+            to { transform: translateX(-100%); }
+        }
+        img {
+            height: 300px;
+            margin-right: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="menu-links">
+        <a href="index.4.2.html">Home</a>    
+        <a href="sports.4.2.html">Sports</a>  
+        <a href="universities.4.2.html">Universities</a>
+        <a href="culture.4.2.html">Culture</a>
+        <a href="reason.4.2.html">Why are you Visiting?</a>
+    </div>
+
+    <p>Sheffield is famous for its beautiful natural environment.</p>
+
+    <div class="scroll-container">
+        <div class="scroll-images">
+            <img src="path.jpg" alt="Sheffield" title="Roadside path near Sheffield">
+            <img src="fields.jpg" alt="Sheffield" title="Fields near Sheffield">
+            <img src="lane.jpg" alt="Sheffield" title="Tree-lined lane near Sheffield">
+            <img src="horse.jpg" alt="Sheffield" title="Horse in field near Sheffield">
+            <img src="ecc_rd1.jpg" alt="Sheffield" title="Grass near Ecclesall Road">
+            <img src="sunrise_over_sheffield.jpg" alt="Sheffield" title="Sunrise over Sheffield">
+        </div>
+    </div>
+
+</body>
+</html>
