@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <link rel="stylesheet" href="wts_css.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ 
+</head>
+
+<body>
+
+    <div class="menu-links">
+        <a href="sports.html">Sports</a>  
+        <a href="universities.html">Universities</a>
+        <a href="culture.html">Culture</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="reason.html">Why are you Visiting?</a>
+    </div>
+
+
+        <h1>Welcome to Sheffield!</h1>
+        <p>Sheffield, situated in South Yorkshire, is a populous city which was traditionally famous for its steel industry.  Even today, the memory of its steel industry persists in its nickname: 'Steel City'.</p>
+        <p>However, there is much more to Sheffield than steel.  Today, Sheffield is known as cultural centre, with theatres, galleries, and sports facilities.</p>
+        
+        <br>
+        <p>Click on the links above to explore further.</p>
+
+        <br>
+
+        <p>Some views of Sheffield City Centre:</p>
+        <marquee behavior="scroll">
+            <img src="cc2.jpg" alt=Sheffield title="Sheffield City Centre">
+            <img src="town_hall2.jpg" alt=Sheffield title="Sheffield Town Hall">
+            <img src="city_hall2.jpg" alt=Sheffield title="Sheffield City Hall">
+            <img src="monument2.jpg" alt="Sheffield" title="Sheffield War Memorial">
+            <img src="winter_gardens2.jpg" alt="Sheffield" title="Winter Gardens">
+        </marquee>
+
+        <p>Mouse over the names of these famous Sheffielders to learn more about them.</p>  
+        
+        <style>
+            .container {
+                display: flex;
+                justify-content: center;
+                gap: 40px;
+            }
+            .box {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .hover-text {
+                background-color: #387bd9;
+                width: 200px;  /* Increase width */
+                height: auto;  /* Adjust height dynamically */
+                padding: 10px; /* Adjust padding */
+                text-align: center;
+            }
+        </style>
+        
+        <div class="container">
+            <div class="box">
+                <img src="jess_ennis_hill.jpg" alt="Jessica Ennis-Hill" title="Jessica Ennis-Hill" width="150" height="150" style="display: block; margin: auto; padding: 20px;">
+                <div class="hover-text" data-text="Jessica Ennis-Hill is an athlete from Sheffield, specialising in the heptathlon. She won the gold metal in the heptathlon in the 2012 London Olympic Games.">
+                    Jessica Ennis-Hill
+                </div>
+            </div>
+        
+            <div class="box">
+                <img src="def.jpg" alt="Def Leppard" title="Def Leppard" width="200" height="150" style="display: block; margin: auto; padding: 20px;">
+                <div class="hover-text" data-text="Def Leppard are a rock band formed in Sheffield in 1976. Their album 'Hysteria' has sold more than 30 million copies worldwide.">
+                    Def Leppard
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="michael_palin.jpg" alt="Michael Palin" title="Michael Palin" width="150" height="150" style="display: block; margin: auto; padding: 20px;">
+                <div class="hover-text" data-text="Michael Palin is an actor, writer and traveller from Sheffield. He was a member of the Monty Python comedy group. He has achieved widespread recognition for his acting, as well as his travel documentaries.">
+                    Michael Palin
+                </div>
+            </div>
+        </div>
+        
+        <script>
+            document.querySelectorAll('.hover-text').forEach(element => {
+                const originalText = element.textContent;
+                element.addEventListener('mouseover', () => {
+                    element.textContent = element.getAttribute('data-text');
+                });
+                element.addEventListener('mouseout', () => {
+                    element.textContent = originalText;
+                });
+            });
+        </script>
+  
+        <br>
+        <br>
+
+        <footer>
+            (c) Jed Hirst 2025
+        </footer>
+        <br>
+    
+    </body>
+</html>
