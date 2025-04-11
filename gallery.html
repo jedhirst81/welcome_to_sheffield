@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Gallery</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="wts_css.css">
+
+<style>
+        
+        .scroll-container {
+            white-space: nowrap;
+            overflow: hidden;
+            width: 100%;
+        }
+        .scroll-images {
+            display: inline-block;
+            animation: scroll 20s linear infinite;
+        }
+        @keyframes scroll {
+            from { transform: translateX(5%); }
+            to { transform: translateX(-100%); }
+        }
+        img {
+            height: 300px;
+            margin-right: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="menu-links">
+        <a href="index.html">Home</a>    
+        <a href="sports.html">Sports</a>  
+        <a href="universities.html">Universities</a>
+        <a href="culture.html">Culture</a>
+        <a href="reason.html">Why are you Visiting?</a>
+    </div>
+
+    <br>
+    <p>Sheffield is famous for its beautiful natural environment.</p>
+
+    <div class="scroll-container">
+        <div class="scroll-images">
+            <img src="path.jpg" class="rounded" alt="Sheffield" title="Roadside path near Sheffield">
+            <img src="fields.jpg" class="rounded" alt="Sheffield" title="Fields near Sheffield">
+            <img src="lane.jpg" class="rounded" alt="Sheffield" title="Tree-lined lane near Sheffield">
+            <img src="horse.jpg" class="rounded" alt="Sheffield" title="Horse in field near Sheffield">
+            <img src="ecc_rd1.jpg" class="rounded" alt="Sheffield" title="Grass near Ecclesall Road">
+            <img src="sunrise_over_sheffield.jpg" class="rounded" alt="Sheffield" title="Sunrise over Sheffield">
+        </div>
+    </div>
+
+</body>
+</html>
