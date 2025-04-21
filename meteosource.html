@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Display</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            color: white;
+        }
+        .weather-container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+        .temperature {
+            font-size: 2em;
+            font-weight: bold;
+        }
+        .footer { 
+            position: absolute;
+            bottom: 0; 
+            left: 0; 
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="weather-container">
+        <h2>Current Weather</h2>
+        <p class="temperature">Loading...</p>
+        <p class="description"></p>
+    </div>
+
+    <script>
+        async function fetchWeather() {
+            const response = await fetch("https://www.meteosource.com/api/v1/free/point?lat=53.3N&lon=1.4W&sections=current&timezone=UTC&language=en&units=auto&key=ruvcpx0qb0oaf60bam7as8ebmlvvpcjr63jk163h");
+            const data = await response.json();
+            
+            document.querySelector(".temperature").innerText = `${data.current.temperature}°C`;
+            document.querySelector(".description").innerText = data.current.summary;
+        }
+        
+        fetchWeather();
+    </script>
+
+</body>
+
+<div class="footer">
+    <a href="index.html">Click here to return to the home page.</a>
+</div>
+
+</html>
+
+<!-- 
+References
+
+Abraham, N. 2017. Coding All-in-One For Dummies. John Wiley & Sons.
+
+MeteoSource Free Weather API:
+Meteosource - The Global Weather API & Mapping Platform - current weather and forecast data
+https://www.meteosource.com/
+
+SHU Web Technologies Module 55-709700-AF-20245 course materials
+
+W3C Schools Web Developer Site
+https://www.w3schools.com/ -->
