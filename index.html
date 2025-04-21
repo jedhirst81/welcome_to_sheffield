@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- references external CSS -->
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="wts_css.css">
+</head>
+
+<body>
+
+    <!-- menu -->
+
+    <nav class="navbar navbar-expand-sm bg-light">
+
+        <div class="container-fluid">
+            <ul class="navbar-nav">
+                <li class="nav-item me-3">
+                    <a class="nav-link" href="page_universities.html">Universities</a>
+                </li> 
+                <li class="nav-item me-3">
+                    <a class="nav-link" href="page_entertainments.html">Entertainments</a>
+                </li>
+                <li class="nav-item me-3">
+                    <a class="nav-link" href="page_sports.html">Sports</a>
+                </li>
+                <li class="nav-item me-3">
+                    <a class="nav-link" href="page_gallery.html">Gallery</a>
+                </li>
+                <li class="nav-item me-3">
+                    <a class="nav-link" href="page_reason.html">Why are you visiting?</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+        <!-- Header and introduction -->
+        <br>
+        <h1>Welcome to Sheffield!</h1>
+        <br>
+        <p>Sheffield, situated in South Yorkshire, is a populous city which was traditionally famous for its steel industry.  Even today, the memory of its steel industry persists in its nickname: 'Steel City'.</p>
+        <p>However, there is much more to Sheffield than steel.  Today, Sheffield is known as cultural centre, with theatres, galleries, and sports facilities.</p>
+        
+        <br>
+        <!-- Directs user to menu -->
+        <p>Click on the links above to explore further.</p>
+
+        <br>
+
+        <!-- Scrolling images -->
+        <p>Some views of Sheffield City Centre:</p>
+        <marquee behavior="scroll">
+            <img src="pic_cc.jpg" class="rounded" alt=Sheffield title="Sheffield City Centre">
+            <img src="pic_town_hall.jpg" class="rounded" alt=Sheffield title="Sheffield Town Hall">
+            <img src="pic_city_hall.jpg" class="rounded" alt=Sheffield title="Sheffield City Hall">
+            <img src="pic_monument.jpg" class="rounded" alt="Sheffield" title="Sheffield War Memorial">
+            <img src="pic_winter_gardens.jpg" class="rounded" alt="Sheffield" title="Winter Gardens">
+        </marquee>
+
+        <p>Mouse over the names of these famous Sheffielders to learn more about them.</p>  
+        
+        <!-- Defines a container for images of well-known people form Sheffield  -->
+        <style>
+            .container {
+                display: flex;
+                justify-content: center;
+                gap: 40px;
+            }
+            .box {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .hover-text {
+                background-color: #387bd9;
+                width: 200px;  /* Increase width */
+                height: auto;  /* Adjust height dynamically */
+                padding: 10px; /* Adjust padding */
+                text-align: center;
+            }
+        </style>
+        
+        <!-- Containers for images and names. Includes text which appears when mousing over. -->
+        <div class="container">
+            <div class="box">
+                <img src="pic_jess_ennis_hill.jpg" alt="Jessica Ennis-Hill" title="Jessica Ennis-Hill" width="150" height="150" style="display: block; margin: auto; padding: 20px;">
+                <div class="hover-text" data-text="Jessica Ennis-Hill is an athlete from Sheffield, specialising in the heptathlon. She won the gold metal in the heptathlon in the 2012 London Olympic Games.">
+                    Jessica Ennis-Hill
+                </div>
+            </div>
+        
+            <div class="box">
+                <img src="pic_def.jpg" alt="Def Leppard" title="Def Leppard" width="200" height="150" style="display: block; margin: auto; padding: 20px;">
+                <div class="hover-text" data-text="Def Leppard are a rock band formed in Sheffield in 1976. Their album 'Hysteria' has sold more than 30 million copies worldwide.">
+                    Def Leppard
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="pic_michael_palin.jpg" alt="Michael Palin" title="Michael Palin" width="150" height="150" style="display: block; margin: auto; padding: 20px;">
+                <div class="hover-text" data-text="Michael Palin is an actor, writer and traveller from Sheffield. He was a member of the Monty Python comedy group. He has achieved widespread recognition for his acting, as well as his travel documentaries.">
+                    Michael Palin
+                </div>
+            </div>
+        </div>
+        
+        <!-- JavaScript event handler which causes to text to appear when user mouses over name element -->
+        <script>
+            document.querySelectorAll('.hover-text').forEach(element => {
+                const originalText = element.textContent;
+                element.addEventListener('mouseover', () => {
+                    element.textContent = element.getAttribute('data-text');
+                });
+                element.addEventListener('mouseout', () => {
+                    element.textContent = originalText;
+                });
+            });
+        </script>
+
+        <br>
+        <br>
+
+        <!-- Link to MeteoSource weather API -->
+        <p>Click on the link below to view current weather conditions in Sheffield:</p>
+        <a href="meteosource.html">Current Weather in Sheffield</a>        
+                      
+        <br>
+        <br>
+        <footer>
+            (c) Jed Hirst 2025
+        </footer>
+        <br>
+    
+    </body>
+</html>
+
+
+<!-- References
+
+Abraham, N. 2017. Coding All-in-One For Dummies. John Wiley & Sons.
+
+https://getbootstrap.com/
+
+SHU Web Technologies Module 55-709700-AF-20245 course materials
+
+W3C Schools Web Developer Site
+https://www.w3schools.com/ -->
