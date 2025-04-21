@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Gallery</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="wts_css.css">
+
+    <style>
+        .scroll-container {
+            white-space: nowrap;
+            overflow: hidden;
+            width: 100%;
+        }
+        .scroll-images {
+            display: inline-block;
+            animation: scroll 20s linear infinite;
+        }
+        @keyframes scroll {
+            from { transform: translateX(5%); }
+            to { transform: translateX(-100%); }
+        }
+        img {
+            height: 300px;
+            margin-right: 10px;
+        }
+    </style>
+    
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-sm bg-light">
+        <div class="container-fluid">
+            <ul class="navbar-nav">
+                <li class="nav-item me-3">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item me-3">
+                    <a class="nav-link" href="page_universities.html">Universities</a>
+                </li>
+                <li class="nav-item me-3">
+                    <a class="nav-link" href="page_entertainments.html">Entertainments</a>
+                </li>
+                <li class="nav-item me-3">
+                    <a class="nav-link" href="page_sports.html">Sports</a>
+                </li>
+                <li class="nav-item me-3">
+                    <a class="nav-link" href="page_reason.html">Why are you visiting?</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <br>
+    <p>Sheffield is famous for its beautiful natural environment.</p>
+
+    <div class="scroll-container">
+        <div class="scroll-images">
+            <img src="pic_path.jpg" class="rounded" alt="Sheffield" title="Roadside path near Sheffield">
+            <img src="pic_fields.jpg" class="rounded" alt="Sheffield" title="Fields near Sheffield">
+            <img src="pic_lane.jpg" class="rounded" alt="Sheffield" title="Tree-lined lane near Sheffield">
+            <img src="pic_horse.jpg" class="rounded" alt="Sheffield" title="Horse in field near Sheffield">
+            <img src="pic_ecc_rd.jpg" class="rounded" alt="Sheffield" title="Grass near Ecclesall Road">
+            <img src="pic_sunrise_over_sheffield.jpg" class="rounded" alt="Sheffield" title="Sunrise over Sheffield">
+        </div>
+    </div>
+
+</body>
+</html>
+
+
+<!-- References
+
+Abraham, N. 2017. Coding All-in-One For Dummies. John Wiley & Sons.
+
+https://getbootstrap.com/
+
+SHU Web Technologies Module 55-709700-AF-20245 course materials
+
+W3C Schools Web Developer Site
+https://www.w3schools.com/ -->
